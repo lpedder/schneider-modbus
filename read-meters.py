@@ -65,7 +65,7 @@ def main():
   print(gateway_name + " Meter Readings " + time.strftime("%c") )
   print("======================================================")
 
-  for meter in range(2,10):
+  for meter in range(unit_start, unit_end):
     (meter_name, meter_reading) = read_meter(gateway_ip, meter)
     print("Meter Name:            " + meter_name)
     print("Current Reading (kWh): " + "{:,.3f}".format(meter_reading))
